@@ -18,7 +18,7 @@ const Auth = () => {
       className={`gap-9 flex lg:px-[30px] min-h-screen xl:px-[70px] lg:pt-[2rem] lg:pb-[6rem] relative`}
     >
       <Image 
-      src="/auth/auth-background.png" 
+      src="/auth/auth-background.jpg" 
       alt="Background Image"
       layout="fill"
       objectFit="cover"
