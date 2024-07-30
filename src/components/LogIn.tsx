@@ -6,12 +6,9 @@ import InputGeneral from "@/components/InputGeneral";
 import { AppDispatch } from "@/store";
 import { logInAsync } from "@/store/actions/auth";
 import GoogleLoginButton from "@/components/GoogleButton";
-import { useRouter } from "next/router";
-import { redirect } from "next/dist/server/api-utils";
 
 export default function LogIn() {
   const dispatch = useDispatch<AppDispatch>();
-  const rooter = useRouter()
   const [data, setData] = useState({
     email: "",
     password: "",
@@ -40,7 +37,7 @@ export default function LogIn() {
       return;
     }
     setActive(true);
-    const rut = await dispatch(logInAsync({ data, setActive, setError, dispatch }));
+    dispatch(logInAsync({ data, setActive, setError, dispatch }));
   };
 
   return (

@@ -123,7 +123,8 @@ export const logInAsync = createAsyncThunk(
         setActive(false);
         console.log("Sesión iniciada correctamente");
         dispatch(getUserAsync());
-        return "/home";
+        dispatch(setRedirect("/home"))
+        return {};
       } else {
         setError(response.data.message);
         return rejectWithValue("error");
