@@ -11,6 +11,10 @@ export const apiUrls = {
   putUser: () => `${baseUrl}/api/booker`,
   uploadAvatar: () => `/api/booker/avatar`,
   getImg: (img: string) => `${baseUrl}/avatar/${img}`,
+  //booking
+  getDisponibility: () => `${baseUrl}/api/booking/disponibility`,
+  //movie
+  getMovieById: (movieId: number) => `${baseUrl}/api/movie/get-movie/${movieId}`
 
 };
 
